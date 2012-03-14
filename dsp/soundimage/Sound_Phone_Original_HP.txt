@@ -14,7 +14,7 @@ w 30 05 92 # Clock Setting Register 2, PLL P&R Values
 w 30 06 04 # Clock Setting Register 3, PLL J Values
 w 30 07 00 # Clock Setting Register 4, PLL D Values (MSB)
 w 30 08 00 # Clock Setting Register 5, PLL D Values (LSB)
-w 30 0b 86 # Clock Setting Register 6, NDAC Values
+w 30 0b 86 # Clock Setting Register 6, NDAC Values for 16K
 w 30 0c 88 # Clock Setting Register 7, MDAC Values
 w 30 0e 80 # DAC OSR Setting Register 2, LSB Value
 w 30 11 08 # DAC miniDSP Interpolation Factor Setting Register

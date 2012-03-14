@@ -1,9 +1,13 @@
 #
-# system.prop for vivow
+# system.prop for kingdom
 #
 ro.sf.lcd_density=240
 
 debug.fb.rgb565=0
+
+# cm qcom build lub
+com.qc.hardware = true
+com.qc.hdmi_out = false
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
@@ -15,13 +19,9 @@ rild.lib_ims_path=/system/lib/libims_ril.so
 # lexikon RF team request
 ro.ril.enable.dtm=1
 ro.ril.gprsclass=12
-ro.ril.hsdpa.category=8
+ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=2
-
-#VZW featuer enabled
-ro.ril.vzw.feature=1
-ro.ril.enable.managed.roaming=1
 
 # world phone feature enabled
 ro.ril.wp.feature=1
@@ -29,7 +29,7 @@ ro.ril.wp.feature=1
 # 4 => CDMA mode preferred.
 ro.telephony.default_network=4
 
-# For Verizon data retry configuration
+# For Sprint data retry configuration
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
 
 # Define TCP buffer sizes
@@ -43,12 +43,17 @@ persist.data_netmgrd_nint=8
 wifi.interface=eth0
 wifi.supplicant_scan_interval=15
 
-#Welly_Fang_01/05/2010
-ro.cdma.home.operator.numeric=310012
-ro.cdma.home.operator.alpha=Verizon
+ro.cdma.home.operator.alpha = sprint
+ro.cdma.home.operator.numeric = 310120
+gsm.sim.operator.alpha = sprint
+gsm.operator.alpha = sprint
+gsm.sim.operator.numeric = 310120
+gsm.operator.numeric = 310120
+gsm.sim.operator.iso-country = us
+gsm.operator.iso-country = us
 
 #mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
-mobiledata.interfaces=rmnet0
+mobiledata.interfaces=rmnet0,eth0,gprs,ppp0,wimax0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -62,9 +67,6 @@ ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
-
-# Vivow China NEL use
-ro.ril.update.vivow.acoustic=1
 
 # Properties of Scalado Denoise param.
 postprocess.iso_midband=400
