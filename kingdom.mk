@@ -34,24 +34,6 @@ PRODUCT_COPY_FILES += \
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/kingdom/kingdom-vendor.mk)
 
-## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.oem.ecclist=911 \
-    ro.ril.def.agps.mode=2 \
-    htc.audio.alt.enable=1 \
-    htc.audio.hac.enable=1 \
-    ro.com.google.clientidbase=android-sprint-us \
-    ro.com.google.clientidbase.yt=android-sprint-us \
-    ro.com.google.clientidbase.am=android-sprint-us \
-    ro.com.google.clientidbase.vs=android-sprint-us \
-    ro.com.google.clientidbase.gmm=android-sprint-us \
-    ro.com.google.clientidbase.ms=android-sprint-us \
-    ro.com.google.networklocation=1 \
-    ro.com.google.gmsversion=2.3_r7 \
-    dalvik.vm.dexopt-flags=m=y \
-    ro.cdma.home.operator.numeric = 310120 \
-    ro.cdma.home.operator.alpha = sprint
-
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
@@ -83,7 +65,8 @@ PRODUCT_COPY_FILES += \
     device/htc/kingdom/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/kingdom/keylayout/kingdom-keypad.kl:system/usr/keylayout/kingdom-keypad.kl \
     device/htc/kingdom/keylayout/kingdom-keypad-v0.kl:system/usr/keylayout/kingdom-keypad-v0.kl \
-    device/htc/kingdom/keylayout/BT_HID.kl:system/usr/keylayout/BT_HID.kl
+    device/htc/kingdom/keylayout/BT_HID.kl:system/usr/keylayout/BT_HID.kl \
+    device/htc/kingdom/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl
 
 # Firmware
 PRODUCT_COPY_FILES += \
@@ -151,23 +134,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/kingdom/media_profiles.xml:system/etc/media_profiles.xml
 
-# Kernel modules
-#PRODUCT_COPY_FILES += \
-
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/kingdom/prebuilt/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+# Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Kernel modules
 PRODUCT_COPY_FILES += \
-    device/htc/kingdom/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/htc/kingdom/prebuilt/sequans_sdio.ko:system/lib/modules/sequans_sdio.ko \
-    device/htc/kingdom/prebuilt/wimaxdbg.ko:system/lib/modules/wimaxdbg.ko \
-    device/htc/kingdom/prebuilt/wimaxuart.ko:system/lib/modules/wimaxuart.ko
+    device/htc/kingdom/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)

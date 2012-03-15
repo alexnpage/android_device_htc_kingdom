@@ -23,6 +23,9 @@ ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=2
 
+# Emergency number
+ro.ril.oem.ecclist=911
+
 # world phone feature enabled
 ro.ril.wp.feature=1
 # Default network type.
@@ -43,6 +46,23 @@ persist.data_netmgrd_nint=8
 wifi.interface=eth0
 wifi.supplicant_scan_interval=15
 
+# HTC audio features
+htc.audio.alt.enable=1
+htc.audio.hac.enable=1
+
+# Google
+ro.com.google.clientidbase=android-sprint-us
+ro.com.google.clientidbase.yt=android-sprint-us
+ro.com.google.clientidbase.am=android-sprint-us
+ro.com.google.clientidbase.vs=android-sprint-us
+ro.com.google.clientidbase.gmm=android-sprint-us
+ro.com.google.clientidbase.ms=android-sprint-us
+ro.com.google.networklocation=1
+ro.com.google.gmsversion=2.3_r7
+
+# Dex flags
+dalvik.vm.dexopt-flags=m=y
+
 ro.cdma.home.operator.alpha = sprint
 ro.cdma.home.operator.numeric = 310120
 gsm.sim.operator.alpha = sprint
@@ -53,7 +73,7 @@ gsm.sim.operator.iso-country = us
 gsm.operator.iso-country = us
 
 #mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
-mobiledata.interfaces=rmnet0,eth0,gprs,ppp0,wimax0
+mobiledata.interfaces=rmnet0,eth0,gprs,ppp0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number

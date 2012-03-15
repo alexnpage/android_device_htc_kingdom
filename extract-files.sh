@@ -25,23 +25,10 @@ chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
 adb pull /system/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/dmagent ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/getWiMAXPropDaemond ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/logcat2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/lsc_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/setWiMAXPropDaemon ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimax_mtd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimax_uart ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxAddRoute ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxConfigInterface ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDaemon ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDhcpRelease ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDhcpRenew ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDumpKmsg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDumpLastKmsg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/wimaxDumpLogcat ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/etc/wimax/dhcp/wimaxDhcp.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -92,23 +79,10 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/awb_camera:/system/bin/awb_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bma150_usr:/system/bin/bma150_usr \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/dmagent:/system/bin/dmagent \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/getWiMAXPropDaemond:/system/bin/getWiMAXPropDaemond \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/lsc_camera:/system/bin/lsc_camera \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/setWiMAXPropDaemond:/system/bin/setWiMAXPropDaemond \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimax_mtd:/system/bin/wimax_mtd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimax_uart:/system/bin/wimax_uart \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxAddRoute:/system/bin/wimaxAddRoute \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxConfigInterface:/system/bin/wimaxConfigInterface \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDaemon:/system/bin/wimaxDaemon \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDhcpRelease:/system/bin/wimaxDhcpRelease \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDhcpRenew:/system/bin/wimaxDhcpRenew \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDumpKmsg:/system/bin/wimaxDumpKmsg \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDumpLastKmsg:/system/bin/wimaxDumpLastKmsg \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDumpLogcat:/system/bin/wimaxDumpLogcat \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/wimaxDhcp.conf:/system/etc/wimax/dhcp/wimaxDhcp.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
